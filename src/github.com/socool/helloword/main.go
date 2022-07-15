@@ -17,4 +17,45 @@ func main() {
    println("TYPE 4")
    var j, k, l = false, 10, "เรียนภาษา Go";
    println(j,":",k,":",l);
+
+   printSchoolAddress();
+   printSchoolAddressWithParam("ศรีราชา");
+
+   schoolAddress := getSchoolAddress();
+   println(schoolAddress);
+
+   resultCode, resultAddress := getSchoolAddressWithParam(); 
+   println(resultCode,":",resultAddress);
+
+}
+// FUNCTION DECLARATIONS
+/**
+BASIC FUNCTION
+**/
+func printSchoolAddress() {
+   println("กรุงเทพ");
+}
+
+/**
+WITH PARAMETER
+**/
+func printSchoolAddressWithParam(schoolAddress string) {
+   println(schoolAddress);
+}
+
+/**
+RETURN VALUE
+**/
+func getSchoolAddress() string {
+   return "กรุงเทพ";
+}
+
+
+/**
+RETURN VALUE
+**/
+func getSchoolAddressWithParam() (int, string) {
+   code := 1993;
+   address := "กรุงเทพ";
+   return code, address;
 }
